@@ -14,7 +14,7 @@ header {
     background-color: #00FFFF;
 }
 header h1 {
-    color: ##00FFFF;
+    color: white;
     font-size: 250%;
 }
 header h2 {
@@ -23,7 +23,7 @@ header h2 {
 }
 #sitenav {
     color: white;
-    background-color: #404;
+    background-color: #00F;
 }
 #sitenav ol {
     font-size: 90%;
@@ -43,7 +43,7 @@ header h2 {
     color: #DDDD00;
 }
 #main {
-    background-color: #055;
+    background-color: #FFF;
 }
 .content {
     background-color: white;
@@ -56,11 +56,11 @@ header h2 {
     font-size: 100%;
     color: white;
     font-weight: normal;
-    background-color: #404;
+    background-color: #0FF;
 }
 #sidebar ol {
     background-color: white; 
-    border: 2px solid #404;
+    border: 2px solid #0FF;
     border-top: 0;
 }
 #sidebar li {
@@ -74,7 +74,7 @@ header h2 {
     color: #404;
 }
 footer {
-    background-color: #404; 
+    background-color: #0FF; 
     color: white;
 }
 footer p {
