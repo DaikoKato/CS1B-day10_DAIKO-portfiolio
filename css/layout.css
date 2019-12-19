@@ -66,9 +66,6 @@ height: auto;
 #main {
 padding: 0;
 }
-
-@media (max-width: 600px) {
 #sidebar {
-padding: 0;
 visibility: hidden;
-}
+}}
