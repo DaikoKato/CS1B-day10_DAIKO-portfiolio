@@ -32,41 +32,34 @@
 		<p>
 			INPUT numbers :&nbsp;<input type="text" id="input1">
       <input type="button" onclick="getInput()" value="to Symbol(1~36)"><br>
-      OUTPUT symbols :&nbsp;<span id="output1" class="answer"></span>
+      OUTPUT symbols :&nbsp;<span id="output1" class="answer"></span><br>
+
+      INPUT something :&nbsp;<input type="text" id="input2">
+      <input type="button" onclick="getInput2()" value="to ???"><br>
+      OUTPUT ??? :&nbsp;<span id="output2" class="answer"></span><br>
     </p>
   </div>
   <img src="periodic table.jpg" alt="periodic tabl" title="periodic tabl">
 </body>
 <script>
-  /*
-  You can change anything on this page--HTML tags, CSS styles, JavaScript 
-  functions, etc. Do what you need to make it suitable for your STEM problem.
-  The lines of YOUR CODE are just a suggestion.
-
-  The getInput function will take user input from the page. You should call  
-  your functions from inside the getInput function.
-  
-  The writeOutput function will write some given text to the output span on
-  the page. You can call this function with your code when you have a result.
-  */
 
 let periodictable = ["H Hydrogen", "He Helium", "Li Lithium", "Be Beryllium", "B Boron", "C Carbon", "N Nitrogen", "O Oxygen", "F Fluorine", "Ne Neon", "Na Sodium", "Mg Magnesium", "Al Aluminum", "Si Silicon", "P Phosphorus", "S Sulfur", "Cl Chlorine", "Ag Argon", "K Potassium", "Ca Calcium", "Sc Scandium", "Ti Titanium", "V Vanadium", "Cr Chromium", "Mn Manganese", "Fe Iron", "Co Covalt", "Ni Nickel", "Cu Copper", "Zn Zinc", "Ga Gallium", "Ge Germanium", "As Arsenic", "Se Selenium", "Br Bromine", "Kr Krypton"];
 
-  // This function will get the text entered into the "input" text field.
-  // Then it calls another function with the input as an argument.
-
 let result;
 
-  function getInput() {
-    let inputField = document.getElementById("input1").value;
-    
-    console.log(inputField); 
+function getInput() {
+  let inputField = document.getElementById("input1").value;
+  
+  console.log(inputField); 
   console.log(parseInt(inputField));   
   console.log(Number.isInteger(parseInt(inputField)));
 
+  showNameOfElement(inputField);
+}
 
-  if (Number.isInteger(parseInt(inputField)) == true) {
-    let input = inputField;
+function showNameOfElement(number) {
+  if (Number.isInteger(parseInt(number)) == true) {
+    let input = number;
     let num = 1;
     result = periodictable[input - 1];
     console.log( result );
@@ -77,20 +70,27 @@ let result;
     window.alert("please put number");
   }
 
-    //If I type a non-numeric character, it will show "undefined", so I want use the "if" statement, and if "ddddd", it will show "please put number" or something like that.
+  writeOutput(result); 
+}
 
-    // do something with the input
-    writeOutput(result); // <-- replace this with YOUR CODE
-  }
-
-
-  // This function will write some text to the output span on the page.
-  function writeOutput(text) {
-    let outputSpan = document.getElementById("output1");
-    outputSpan.innerText = text;
-  }
+function writeOutput(text) {
+  let outputSpan = document.getElementById("output1");
+  outputSpan.innerText = text;
+}
 
 
+function getInput2() {
+  let inputField = document.getElementById("input2");
+  let input = inputField.value;
+  writeOutput2("Chemistry is Awesome!!");// <-- replace this with YOUR CODE
+}
+
+function writeOutput2(text2) {
+  let outputSpan = document.getElementById("output2");
+  outputSpan.innerText = text2;
+}
+
+  
 </script>
 
 </html>
